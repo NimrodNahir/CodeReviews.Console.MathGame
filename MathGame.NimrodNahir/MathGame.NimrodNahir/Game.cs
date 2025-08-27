@@ -4,9 +4,9 @@
     {
         private eGameType m_GameType;
         private eDifficulty m_GameDifficulty;
-        private int m_Score = 0;
+        private int m_Score;
         private eGameLength m_GameLength;
-        private int m_NumbersLowerLimit;
+        private int m_NumbersLowerLimit = 1;
         private int m_NumbersHigherLimit = 100;
         private int m_NumberOfQuestions = 5;
         private DateTime m_GameDate = DateTime.Now;
