@@ -24,9 +24,9 @@
 
         internal Round(eGameType i_RoundType, int i_LowerLimit, int i_HigherLimit, Random i_NumberGen)
         {
-            create(i_RoundType,i_LowerLimit,i_HigherLimit, i_NumberGen);
+            Create(i_RoundType,i_LowerLimit,i_HigherLimit, i_NumberGen);
         }
-        internal void create(eGameType i_RoundType, int i_LowerLimit, int i_HigherLimit, Random i_NumberGen)
+        internal void Create(eGameType i_RoundType, int i_LowerLimit, int i_HigherLimit, Random i_NumberGen)
         {
             
             int firstNumber = i_NumberGen.Next(i_LowerLimit, i_HigherLimit);

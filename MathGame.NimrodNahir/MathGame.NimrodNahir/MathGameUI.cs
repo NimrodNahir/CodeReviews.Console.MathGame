@@ -2,7 +2,7 @@
 {
     internal static class MathGameUI
     {
-        internal static int showMainMenu()
+        internal static int ShowMainMenu()
         {
             Console.Clear();
             Console.WriteLine("Welcome to my math game!");
@@ -11,10 +11,10 @@
             Console.WriteLine("2. View Games History");
             Console.WriteLine("3. Exit");
             Console.WriteLine("-----------------------------------");
-            return validateUserChoice(1, 3);
+            return ValidateUserChoice(1, 3);
         }
 
-        internal static eGameType? showGameTypeMenu()
+        internal static eGameType? ShowGameTypeMenu()
         {
             Console.Clear();
             Console.WriteLine("Game Setup - Select Game Type");
@@ -26,7 +26,7 @@
             Console.WriteLine("5. Random");
             Console.WriteLine("6. Cancle (Main Menu)");
             Console.WriteLine("-----------------------------------");
-            int choice = validateUserChoice(1, 6);
+            int choice = ValidateUserChoice(1, 6);
             eGameType? selectedGameType = choice switch
             {
                 1 => eGameType.Addition,
@@ -40,7 +40,7 @@
             return selectedGameType;
         }
 
-        internal static eDifficulty? showGameDiffiucltyMenu()
+        internal static eDifficulty? ShowGameDiffiucltyMenu()
         {
             Console.Clear();
             Console.WriteLine("Game Setup - Select Game Type");
@@ -51,7 +51,7 @@
             Console.WriteLine("4. Brutal");
             Console.WriteLine("5. Cancel (Main Menu)");
             Console.WriteLine("-----------------------------------");
-            int choice = validateUserChoice(1, 5);
+            int choice = ValidateUserChoice(1, 5);
             eDifficulty? selectedGameDifficulty= choice switch
             {
                 1 => eDifficulty.Easy,
@@ -64,7 +64,7 @@
             return selectedGameDifficulty;
         }
 
-        internal static eGameLength? showGameLengthMenu()
+        internal static eGameLength? ShowGameLengthMenu()
         {
             Console.Clear();
             Console.WriteLine("Game Setup - Select Game Type");
@@ -74,7 +74,7 @@
             Console.WriteLine("3. Long");
             Console.WriteLine("4. Cancel (Main Menu)");
             Console.WriteLine("-----------------------------------");
-            int choice = validateUserChoice(1, 4);
+            int choice = ValidateUserChoice(1, 4);
             eGameLength? selectedGameLength = choice switch
             {
                 1 => eGameLength.Short,
@@ -86,7 +86,7 @@
             return selectedGameLength;
         }
 
-        private static int validateUserChoice(int i_low, int i_high)
+        private static int ValidateUserChoice(int i_low, int i_high)
         {
             int choice;
             string? input = Console.ReadLine();

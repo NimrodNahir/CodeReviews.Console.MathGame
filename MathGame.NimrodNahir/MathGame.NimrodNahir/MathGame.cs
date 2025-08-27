@@ -12,14 +12,14 @@
             bool isActive = true;
             while (isActive)
             {
-                int actionIndex = MathGameUI.showMainMenu();
+                int actionIndex = MathGameUI.ShowMainMenu();
                 switch (actionIndex)
                 {
                     case 1:
-                        startNewGame();
+                        StartNewGame();
                         break;
                     case 2:
-                        viewHistory();
+                        ViewHistory();
                         break;
                     case 3:
                         isActive = false;
@@ -30,9 +30,9 @@
             }
         }
 
-        private void startNewGame()
+        private void StartNewGame()
         {
-            Game? currGame = createGame();
+            Game? currGame = CreateGame();
             if(currGame is not null)
             {
                 currGame.Start();
@@ -40,19 +40,19 @@
             }
         }
 
-        private Game? createGame()
+        private Game? CreateGame()
         {
-            eGameType? type = MathGameUI.showGameTypeMenu();
+            eGameType? type = MathGameUI.ShowGameTypeMenu();
             if(type is null)
             {
                 return null;
             }
-            eDifficulty? difficulty = MathGameUI.showGameDiffiucltyMenu();
+            eDifficulty? difficulty = MathGameUI.ShowGameDiffiucltyMenu();
             if(difficulty is null)
             {
                 return null;
             }
-            eGameLength? length = MathGameUI.showGameLengthMenu();
+            eGameLength? length = MathGameUI.ShowGameLengthMenu();
 
             if (length is null)
             {
@@ -61,7 +61,7 @@
 
             return new Game((eGameType)type, (eDifficulty)difficulty, (eGameLength)length);
         }
-        private void viewHistory()
+        private void ViewHistory()
         {
             MathGameUI.ShowGamesHistory(m_PreviousGames);
         }

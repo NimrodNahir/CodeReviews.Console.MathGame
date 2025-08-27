@@ -6,7 +6,7 @@
         private eDifficulty m_GameDifficulty;
         private int m_Score = 0;
         private eGameLength m_GameLength;
-        private int m_NumbersLowerLimit = 0;
+        private int m_NumbersLowerLimit;
         private int m_NumbersHigherLimit = 100;
         private int m_NumberOfQuestions = 5;
         private DateTime m_GameDate = DateTime.Now;
@@ -50,7 +50,7 @@
 
         internal void Start()
         {
-            initGameSettings();
+            InitGameSettings();
             m_GameDate = DateTime.Now;
             Random randNumGenerator = new();
             Round currRound;
@@ -92,7 +92,7 @@
             MathGameUI.ShowEndGameScreen(m_Score, m_NumberOfQuestions);
         }
 
-        private void initGameSettings()
+        private void InitGameSettings()
         {
             m_Score = 0;
             switch(m_GameDifficulty)
